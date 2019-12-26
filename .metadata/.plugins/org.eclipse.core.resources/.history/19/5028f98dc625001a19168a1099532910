@@ -1,0 +1,22 @@
+package com.ers.v2.actions;
+
+import com.ers.v2.daoImpl.ReimbursementDaoImpl;
+import com.ers.v2.models.Employee;
+import com.ers.v2.models.Reimbursement;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class EmpCreateReimbAction extends ActionSupport {
+
+	private static final long serialVersionUID = 1L;
+	
+	private Reimbursement reimbursement;
+	private ReimbursementDaoImpl reimbDaoImpl;
+	
+	public String execute() {
+		return "success";
+	}
+	
+	public String createReimb() {
+		return null;
+	}
+}

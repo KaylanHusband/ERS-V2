@@ -1,0 +1,24 @@
+package com.ers.v2.actions;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class EmpViewPendReimbAction extends ActionSupport implements SessionAware {
+	
+	private Map<String,Object> userSession;
+	private int id;
+	
+	@Override
+	public String execute() {
+		return "success";
+	}
+	
+	@Override
+	public void setSession(Map<String, Object> session) {
+		userSession = session;
+	}
+
+}

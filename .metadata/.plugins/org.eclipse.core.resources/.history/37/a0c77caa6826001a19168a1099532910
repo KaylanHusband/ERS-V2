@@ -1,0 +1,5 @@
+package com.ers.v2.interceptors;
+
+public class SeesionInterceptor {
+
+}

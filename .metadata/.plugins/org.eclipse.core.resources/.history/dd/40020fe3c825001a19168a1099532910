@@ -1,0 +1,46 @@
+package com.ers.v2.actions;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.ers.v2.daoImpl.ReimbursementDaoImpl;
+import com.ers.v2.models.Employee;
+import com.ers.v2.models.Reimbursement;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class EmpCreateReimbAction extends ActionSupport implements SessionAware{
+	
+	private double reAmount;
+	private String description;
+
+	private static final long serialVersionUID = 1L;
+	private Map<String,Object> userSession;
+	
+	private Reimbursement reimbursement;
+	private ReimbursementDaoImpl reimbDaoImpl;
+	
+	@Override
+	public String execute() {
+		return "success";
+	}
+	
+	
+	public String setSession(Map<String, Object> session) {
+		userSession = session;
+		
+		reimbDaoImpl = new ReimbursementDaoImpl();
+		
+		if(session.containsKey("EMP_ID")) {
+			int id = (int)session.get("EMP_ID");
+			reimbursement = new Reimbursement(reAmount,description,id);
+			return "Created";
+		}else
+			return "fail";
+	}
+	
+	public String createReimb() {
+		return null;
+	}
+
+}

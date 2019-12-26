@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+
+<package name="login" extends="struts-default">
+	<action name="login">
+		<result>/JSP's/Login/LoginPage.jsp</result>
+	</action>
+	<action name = "userLogin" class = "com.ers.v2.actions.LoginAction" method = "execute">
+		<result name = "test">/JSP's/Employee/EmpHome.jsp</result>
+		<result name = "manager">/JSP's/Manager/ManHome.jsp</result>
+	</action>
+	<action name = "create-user" class = "com.ers.v2.actions.CreateUserAction" method = "execute">
+		<result name = "success">/JSP's/Login/CreateUser.jsp</result>
+	</action>
+	<action name = "create-user-login" class = "com.ers.v2.actions.CreateUserAction" method = "createUser">
+		<result name = "employee">/JSP's/Login/LoginPage.jsp</result>
+		<result name = "manager">/JSP's/Login/LoginPage.jsp</result>
+		<result name = "fail">/JSP's/Login/CreateUser.jsp</result>
+	</action>
+</package>
+
+<package name="employee" extends = "struts-default">
+	<action name = "emp-home">
+		<result name = "success">/JSP's/Employee/EmpHome.jsp</result>
+	</action>
+	<action name = "emp-create-reimb">
+		<result name = "success">/JSP's/Employee/EmpCreateReimb.jsp</result>
+	</action>
+	<action name = "emp-view-reimb">
+		<result name = "success">/JSP's/Employee/EmpViewReimb.jsp</result>
+	</action>
+	<action name = "emp-appr-reimb">
+		<result name = "success">/JSP's/Employee/EmpApprReimb.jsp</result>
+	</action>
+	<action name = "emp-den-reimb">
+		<result name = "success">/JSP's/Employee/EmpDenReimb.jsp</result>
+	</action>
+	<action name= "emp-profile">
+		<result name = "success">/JSP's/Employee/EmpProfile.jsp</result>
+	</action>
+</package>
+
+<package name = "manager" extends = "struts-default">
+	<action name = "man-home">
+		<result name = "success">/JSP's/Manager/ManHome.jsp</result>
+	</action>
+	<action name = "man-view-emp">
+		<result name = "success">/JSP's/Manager/ManViewEmp.jsp</result>
+	</action>
+	<action name = "man-view-reimb">
+		<result name = "success">/JSP's/Manager/ManViewReimb.jsp</result>
+	</action>
+	<action name = "man-view-appr">
+		<result name = "success">/JSP's/Manager/ManViewAppr.jsp</result>
+	</action>
+	<action name = "man-view-den">
+		<result name = "success">/JSP's/Manager/ManViewDen.jsp</result>
+	</action>
+	<action name = "man-profile">
+	</action>
+</package>
+</struts>

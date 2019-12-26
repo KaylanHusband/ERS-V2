@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="login" namespace="/Login" extends="struts-default">
+	<action name="login" method = "execute">
+		<result name = "success">/JSP's/LoginPage.jsp</result>
+	</action>
+	<action name = "create-user">
+		<result name = "success">/JSP's/CreateUser.jsp</result>
+	</action>
+</package>
+
+<package name="employee" namespace = "/Employee" extends = "struts-default">
+	<action name = "emp-home">
+		<result name = "success">/JSP's/EmpHome.jsp</result>
+	</action>
+	<action name = "emp-create-reimb">
+		<result name = "success">/JSP's/EmpCreateReimb.jsp</result>
+	</action>
+	<action name = "emp-view-reimb">
+		<result name = "success">/JSP's/EmpViewReimb.jsp</result>
+	</action>
+	<action name = "emp-apr-reimb">
+		<result name = "success">/JSP's/EmpApprReimb.jsp</result>
+	</action>
+	<action name = "emp-den-reimb">
+		<result name = "success">/JSP's/EmpDenReimb.jsp</result>
+	</action>
+	<action name= "emp-profile">
+		<result name = "success">/JSP's/EmpProfile.jsp</result>
+	</action>
+</package>
+
+<package name = "manager" namespace = "/Manager" extends = "struts-default">
+	<action name = "manager-home">
+		<result>JSP's/</result>
+	</action>
+</package>
+</struts>

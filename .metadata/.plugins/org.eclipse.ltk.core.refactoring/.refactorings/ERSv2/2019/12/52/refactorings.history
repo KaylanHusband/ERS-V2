@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.ers.v2.interceptors.SeesionInterceptor&apos; to &apos;SessionInterceptor&apos;&#x0D;&#x0A;- Original project: &apos;ERSv2&apos;&#x0D;&#x0A;- Original element: &apos;com.ers.v2.interceptors.SeesionInterceptor&apos;&#x0D;&#x0A;- Renamed element: &apos;com.ers.v2.interceptors.SessionInterceptor&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SeesionInterceptor&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.ers.v2.interceptors{SeesionInterceptor.java[SeesionInterceptor" matchStrategy="1" name="SessionInterceptor" qualified="false" references="true" similarDeclarations="false" stamp="1577204473739" textual="false" version="1.0"/>
+</session>

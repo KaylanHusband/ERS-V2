@@ -1,0 +1,12 @@
+package com.ers.v2.actions;
+
+public class Practice {
+	public static void main(String[] args) {
+		String s = "j l  k";
+		String[] strArr = s.split(" ");
+		for(String st:strArr) {
+			System.out.println(st);
+		}
+	}
+	
+}

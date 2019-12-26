@@ -1,0 +1,11 @@
+package com.ers.v2.actions;
+
+import com.ers.v2.daoImpl.EmployeeDaoImpl;
+
+public class test {
+	private EmployeeDaoImpl emp = new EmployeeDaoImpl();
+	public static void main(String[] args) {
+		
+	}
+
+}

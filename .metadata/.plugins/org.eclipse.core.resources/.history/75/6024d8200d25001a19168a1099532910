@@ -1,0 +1,51 @@
+package com.ers.v2.actions;
+
+import com.ers.v2.daoImpl.EmployeeDaoImpl;
+import com.ers.v2.daoImpl.ManagerDaoImpl;
+import com.ers.v2.models.Employee;
+import com.ers.v2.models.Manager;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginAction extends ActionSupport{
+
+	private String username;
+	private String password;
+	
+	private EmployeeDaoImpl emplDaoImpl;
+	private ManagerDaoImpl manDaoImpl;
+	
+	
+	private static final long serialVersionUID = 1L;
+	
+	
+	@Override
+	public String execute() {
+		return "success";
+	}
+	
+	public String userLogin() {
+		if(emplDaoImpl.loginEmployee(username, password)!=0) {
+			return "employee";
+		}else
+		return "fail";
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
+
+}

@@ -1,0 +1,12 @@
+1576369474550	Rename resource 'EmployeeHome.jsp'
+1576369674190	Move 'CreateUser.jsp' to 'Employee'
+1576369675902	Move 'EmpApprReimb.jsp' to 'Employee'
+1576369677346	Move 'EmpCreateReimb.jsp' to 'Employee'
+1576369678635	Move 'EmpDenReimb.jsp' to 'Employee'
+1576369679994	Move 'EmpHome.jsp' to 'Employee'
+1576369681276	Move 'EmpProfile.jsp' to 'Employee'
+1576369682525	Move 'EmpViewReimb.jsp' to 'Employee'
+1576369688939	Move 'CreateUser.jsp' to 'JSP's'
+1576370961158	Move 'CreateUser.jsp' to 'Login'
+1576370962804	Move 'LoginPage.jsp' to 'Login'
+1576765821921	Delete element

@@ -1,0 +1,80 @@
+package com.ers.v2.actions;
+
+import com.ers.v2.daoImpl.EmployeeDaoImpl;
+import com.ers.v2.daoImpl.ManagerDaoImpl;
+import com.ers.v2.models.Employee;
+import com.ers.v2.models.Manager;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class CreateUserAction extends ActionSupport{
+	
+	private String name;
+	private String username;
+	private String password;
+	private boolean isManager;
+	
+	private Employee employee;
+	private Manager manager;
+	private EmployeeDaoImpl empDaoImpl = new EmployeeDaoImpl();
+	private ManagerDaoImpl manDaoImpl = new ManagerDaoImpl();
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public String execute() {		
+		return "success";
+	}
+	public String createUser() {
+		if(isManager == false) {
+			employee = new Employee(name,username,password);
+			if (empDaoImpl.createEmployee(employee) == true) {
+				return "employee";
+			}
+		} else if(isManager == true) {
+			manager = new Manager(name,username,password);
+			if(manDaoImpl.createManager(manager)==true) {
+				return "manager";
+			}
+		}
+		return "fail";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public boolean isManager() {
+		return isManager;
+	}
+
+	public void setManager(boolean isManager) {
+		this.isManager = isManager;
+	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
+	
+	
+}

@@ -1,0 +1,30 @@
+package com.ers.v2.actions;
+
+import com.ers.v2.daoImpl.EmployeeDaoImpl;
+import com.ers.v2.daoImpl.ManagerDaoImpl;
+import com.ers.v2.models.Employee;
+import com.ers.v2.models.Manager;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginAction extends ActionSupport{
+
+	private String username;
+	private String password;
+	
+	private Employee employee;
+	private Manager manager;
+	private EmployeeDaoImpl emplDaoImpl;
+	private ManagerDaoImpl manDaoImpl;
+	
+	
+	private static final long serialVersionUID = 1L;
+	
+	
+	@Override
+	public String execute() {
+		employee = new Employee(username,password);
+		return "test";
+	}
+
+
+}
