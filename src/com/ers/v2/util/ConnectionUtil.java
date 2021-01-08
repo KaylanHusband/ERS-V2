@@ -18,12 +18,12 @@ public class ConnectionUtil {
 					e.printStackTrace();
 				}
 
-				String url = "jdbc:postgresql://side-project-db.ch9ye5f6gxxd.us-east-2.rds.amazonaws.com:5432/postgres";
-				String username = System.getenv("DB_USER");
-				String password = System.getenv("DB_PASS");
+				String url = "jdbc:postgresql://ec2-54-205-26-79.compute-1.amazonaws.com:5432/de5nca472dllg";
+				String username = "viessrjskkiybp";
+				String password = "3fb85ffec1693c6b2ef95f0e80f9bb9c636f074af010b0d1d1b0029ed1dc8628";
 
 				if(connection == null || connection.isClosed()) {
-					connection = DriverManager.getConnection(url, "postgres", "kayjay709");
+					connection = DriverManager.getConnection(url, username, password);
 				}
 
 				return getH2Connection();
